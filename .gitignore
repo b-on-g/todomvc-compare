@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.tsbuildinfo
+*.js.map
+.rollup.cache/
+lit/index.js
+lit/lib/

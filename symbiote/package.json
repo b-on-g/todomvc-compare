@@ -1,0 +1,14 @@
+{
+    "name": "todomvc-symbiote",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "esbuild src/app.js --bundle --format=esm --outfile=dist/index.js --minify"
+    },
+    "dependencies": {
+        "@symbiotejs/symbiote": "^2.3.0"
+    },
+    "devDependencies": {
+        "esbuild": "^0.28.0"
+    }
+}
