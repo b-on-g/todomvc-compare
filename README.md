@@ -35,7 +35,7 @@
 | **Фреймворк gzip** | ~680 KB | ~8 KB | ~6 KB    |
 | **App-код gzip**   | ~4 KB   | ~4 KB | ~3 KB    |
 
-> **Примечание о бандле $mol**: MAM делает tree-shaking — в бандл попадают только используемые модули. Большой размер обусловлен тем, что TodoMVC использует тяжёлые компоненты ($mol_list с виртуализацией, $mol_state_local, $mol_state_arg роутер, и т.д.), которые тянут свои зависимости. Это не «лишний код» — это функциональность, которой у Lit и Symbiote просто нет.
+> **Примечание о бандле $mol**: MAM делает tree-shaking — в бандл попадают только используемые модули. Большой размер обусловлен тем, что TodoMVC использует тяжёлые компоненты (с виртуализацией, роутером, локализацией и т.д.), которые тянут свои зависимости. Это не «лишний код» — это функциональность, которой у Lit и Symbiote просто нет.
 
 ### Возможности
 
@@ -336,9 +336,7 @@ cd todomvc-compare/symbiote
 npm install && npm run build
 open index.html  # нужен HTTP-сервер для ES modules
 
-# $mol (hyoo_todomvc)
-cd todomvc-compare/mol
-npm install
-npx mam hyoo/todomvc
-open http://localhost:9080/hyoo/todomvc/
+# hyoo_todomvc
+cp ...
+open http://localhost:9080/hyoo/todomvc/-/test.html
 ```
