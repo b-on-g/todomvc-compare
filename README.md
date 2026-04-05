@@ -29,7 +29,7 @@
 
 | Метрика            | $mol    | Lit   | Symbiote |
 | ------------------ | ------- | ----- | -------- |
-| **Bundle raw**     | 181 KB  | 36 KB | 27 KB    |
+| **Bundle raw**     | 185 KB  | 36 KB | 27 KB    |
 | **Bundle gzip**    | 33 KB   | 12 KB | 9 KB     |
 | **Bundle brotli**  | 27 KB   | 11 KB | 8 KB     |
 | **Фреймворк gzip** | ~29 KB  | ~8 KB | ~6 KB    |
