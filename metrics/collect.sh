@@ -27,6 +27,10 @@ echo "### Symbiote"
 find "$ROOT/symbiote/src" -name '*.js' -exec wc -l {} + 2>/dev/null || echo "(not available)"
 echo ""
 
+echo "### Cruzo"
+find "$ROOT/cruzo/src" -name '*.ts' -exec wc -l {} + 2>/dev/null || echo "(not available)"
+echo ""
+
 echo "## Bundle Sizes"
 echo ""
 
@@ -51,6 +55,19 @@ if [ -f "$ROOT/lit/dist/index.js" ]; then
     echo "Gzip:   ${GZIP} bytes ($(( GZIP / 1024 )) KB)"
     if command -v brotli &> /dev/null; then
         BROTLI=$(brotli -c "$ROOT/lit/dist/index.js" | wc -c)
+        echo "Brotli: ${BROTLI} bytes ($(( BROTLI / 1024 )) KB)"
+    fi
+fi
+echo ""
+
+echo "### Cruzo"
+if [ -f "$ROOT/cruzo/dist/index.js" ]; then
+    RAW=$(wc -c < "$ROOT/cruzo/dist/index.js")
+    GZIP=$(gzip -c "$ROOT/cruzo/dist/index.js" | wc -c)
+    echo "Raw:    ${RAW} bytes ($(( RAW / 1024 )) KB)"
+    echo "Gzip:   ${GZIP} bytes ($(( GZIP / 1024 )) KB)"
+    if command -v brotli &> /dev/null; then
+        BROTLI=$(brotli -c "$ROOT/cruzo/dist/index.js" | wc -c)
         echo "Brotli: ${BROTLI} bytes ($(( BROTLI / 1024 )) KB)"
     fi
 fi

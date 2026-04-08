@@ -1,0 +1,14 @@
+{
+    "name": "todomvc-cruzo",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "esbuild src/main.ts --bundle --format=esm --outfile=dist/index.js --minify"
+    },
+    "dependencies": {
+        "cruzo": "^0.9.777"
+    },
+    "devDependencies": {
+        "esbuild": "^0.28.0"
+    }
+}
