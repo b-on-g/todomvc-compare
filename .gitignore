@@ -5,3 +5,4 @@ dist/
 .rollup.cache/
 lit/index.js
 lit/lib/
+.DS_Store
